@@ -17,9 +17,7 @@ using static System.Net.Mime.MediaTypeNames;
 
 namespace ConvertTemp
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
+   
     public partial class MainWindow : Window
     {
 
@@ -32,11 +30,11 @@ namespace ConvertTemp
 
         private void ButtonConvert_Click(object sender, RoutedEventArgs e)
         {
-            if (CboFrom.SelectedItem != null && TextBoxValue.Text != null)   // Je veux m'assurer que l'utilisateur selectionnent les 2 unités et donne une valeur
+            if (CboFrom.SelectedItem != null && TextBoxValue.Text != null)   // Je veux m'assurer que l'utilisateur sélectionne les 2 unités et donne une valeur
             {
                 double value = double.Parse(TextBoxValue.Text); // Ceci est la valeur à convertir
                 object readtextFrom = ((ComboBoxItem)CboFrom.SelectedItem).Content; // Ceci est l'unité de départ 
-                object readtextTo = ((ComboBoxItem)CboTo.SelectedItem).Content; // Ceci est l'unité de d'arrivé 
+                object readtextTo = ((ComboBoxItem)CboTo.SelectedItem).Content; // Ceci est l'unité d'arrivé 
 
 
                 ViewModel.ConverterTempVM temp = new ViewModel.ConverterTempVM(readtextFrom, readtextTo, value);

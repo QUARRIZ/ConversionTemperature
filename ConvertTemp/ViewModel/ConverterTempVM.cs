@@ -22,8 +22,7 @@ namespace ConvertTemp.ViewModel
 
         public string converterTemp()
         {
-            //Si l'utilisateur selectione les mêmes unités
-            if (this.readtextFrom.ToString() == this.readtextTo.ToString())
+            if (this.readtextFrom.ToString() == this.readtextTo.ToString()) //Si l'utilisateur selectione les mêmes unités
             {
                 return temperature.getValue();
             }
