@@ -42,7 +42,7 @@ namespace ConvertTemp
                 }
                 catch
                 {
-                    MessageBox.Show("Erreur : veuiller entré des chiffres"); 
+                    MessageBox.Show("Erreur : veuillez entrer des chiffres"); 
                 }
 
             }
