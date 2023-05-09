@@ -32,19 +32,22 @@ namespace ConvertTemp
         {
             if (CboFrom.SelectedItem != null && TextBoxValue.Text != null)   // Je veux m'assurer que l'utilisateur sélectionne les 2 unités et donne une valeur
             {
-                double value = double.Parse(TextBoxValue.Text); // Ceci est la valeur à convertir
-                object readtextFrom = ((ComboBoxItem)CboFrom.SelectedItem).Content; // Ceci est l'unité de départ 
-                object readtextTo = ((ComboBoxItem)CboTo.SelectedItem).Content; // Ceci est l'unité d'arrivé 
 
-
-                ViewModel.ConverterTempVM temp = new ViewModel.ConverterTempVM(readtextFrom, readtextTo, value);
-
-                TextBoxTotal.Text = temp.converterTemp();
-            }
-
-            else
-            {
                 
+
+
+                try
+                {
+                    double value = double.Parse(TextBoxValue.Text); // Ceci est la valeur à convertir
+                    object readtextFrom = ((ComboBoxItem)CboFrom.SelectedItem).Content; // Ceci est l'unité de départ 
+                    object readtextTo = ((ComboBoxItem)CboTo.SelectedItem).Content; // Ceci est l'unité d'arrivé
+                    TextBoxTotal.Text = TempConverterVM.converterTemp(readtextFrom, readtextTo, value);
+                }
+                catch
+                {
+                    MessageBox.Show("Erreur : veuiller entré des chiffres"); 
+                }
+
             }
         }
     }

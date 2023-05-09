@@ -13,46 +13,34 @@ namespace ConvertTemp.Model
 {
     public class Temperature
     {
-        private double value;
-
-        public Temperature(double value)
+        public static string convertCtoK(double value)
         {
-            this.value = value;
+            return (value + 273.15).ToString();
         }
 
-        public string getValue()
+        public static string convertCtoF(double value)
         {
-            return this.value.ToString();
+            return ((value * 9 / 5) + 32).ToString();
         }
 
-        public string convertCtoK()
+        public static string convertKtoC(double value)
         {
-            return (this.value + 273.15).ToString();
+            return (value - 273.15).ToString();
         }
 
-        public string convertCtoF()
+        public static string convertKtoF(double value)
         {
-            return ((this.value * 9 / 5) + 32).ToString();
+            return ((value * 9 / 5) - 459.67).ToString();
         }
 
-        public string convertKtoC()
+        public static string convertFtoC(double value)
         {
-            return (this.value - 273.15).ToString();
+            return ((value - 32) * 5 / 9).ToString();
         }
 
-        public string convertKtoF()
+        public static string convertFtoK(double value)
         {
-            return ((this.value * 9 / 5) - 459.67).ToString();
-        }
-
-        public string convertFtoC()
-        {
-            return ((this.value - 32) * 5 / 9).ToString();
-        }
-
-        public string convertFtoK()
-        {
-            return ((this.value + 459.67) * 5 / 9).ToString();
+            return ((value + 459.67) * 5 / 9).ToString();
         }
 
     }
