@@ -33,9 +33,6 @@ namespace ConvertTemp
             if (CboFrom.SelectedItem != null && TextBoxValue.Text != null)   // Je veux m'assurer que l'utilisateur sélectionne les 2 unités et donne une valeur
             {
 
-                
-
-
                 try
                 {
                     double value = double.Parse(TextBoxValue.Text); // Ceci est la valeur à convertir
